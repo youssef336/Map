@@ -10,6 +10,11 @@
   <img src="https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" />
 </p>
 
+<p align="center">
+  <img src="docs/screens.jpg" alt="Screens" width="100%"/>
+  <br/><sub>Home · My location · Pickup to destination route</sub>
+</p>
+
 ## About
 
 A ride-hailing-style map screen in Flutter. The first tap on the map sets a pickup marker and the second sets a destination. The app then asks the free public **[OSRM](https://project-osrm.org/)** routing service for a driving route, draws it as a polyline and fits the camera to both points. A floating card shows the distance and estimated travel time. A **Find My Location** button uses `geolocator`, with the full permission flow, to set your current position as the pickup.
