@@ -136,9 +136,9 @@ class _MapViewBodyState extends State<MapViewBody> {
 
         // ✅ Cast to double safely
         distance = (data["routes"][0]["distance"] as num).toDouble(); // meters
-        min = (data["routes"][0]["duration"] as num).toDouble() / 60; // seconds
-        hour =
-            (data["routes"][0]["duration"] as num).toDouble() / 120; // seconds
+        final seconds = (data["routes"][0]["duration"] as num).toInt();
+        hour = (seconds ~/ 3600).toDouble();
+        min = ((seconds % 3600) / 60).roundToDouble();
 
         setState(() {
           _polylines.clear();
